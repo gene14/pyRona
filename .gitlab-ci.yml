@@ -69,6 +69,7 @@ deployment:
         #- twine upload dist/* -u Stunts -p $pypi_password
     only:
         - artifacts  # Make sure this only happens in `master`
+        - tags
     artifacts:
         name: "$CI_PROJECT_NAME-$CI_COMMIT_TAG"
         paths:
